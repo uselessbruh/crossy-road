@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Crossy Road Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container">
+        <div id="score-hud">0</div>
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen">
+                <h1>CROSSY<br>DELUXE</h1>
+                <p>Avoid Traffic.<br>Ride Logs.<br>Don't Drown.</p>
+                <p><span class="key-hint">ARROWS</span> or <span class="key-hint">SWIPE</span></p>
+                <button onclick="game.start()">START</button>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen hidden">
+                <h1>SPLAT!</h1>
+                <p>Score: <span id="final-score">0</span></p>
+                <p id="death-msg">Better luck next time.</p>
+                <button onclick="game.reset()">RETRY</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
